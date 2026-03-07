@@ -92,16 +92,25 @@
 
         <!-- Contact Section -->
         <section id="contact" class="container" style="max-width: 800px; text-align: center;">
-            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Initialize Signal<span class="text-gold">.</span></h2>
-            <p class="text-secondary" style="margin-bottom: 4rem;">Secure communication channel for project inquiries.</p>
-            <div style="background: var(--surface); padding: 3rem; border-radius: var(--radius); border: 1px solid var(--border); text-align: left;">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Initialize Signal</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 4rem;">Secure communication channel for systems innovation and project collaboration.</p>
+            <div class="agent-card" style="text-align: left; background: var(--bg-dark);">
                 <form id="contact-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                        <input type="text" placeholder="ID / Name" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; color: white;">
-                        <input type="email" placeholder="Return Endpoint / Email" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; color: white;">
+                        <div>
+                            <label class="code-font" style="font-size: 0.7rem; color: var(--accent-blue); display: block; margin-bottom: 0.5rem;">CLIENT_ID</label>
+                            <input type="text" placeholder="Your Name" required style="width: 100%; background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; color: white; outline: none;">
+                        </div>
+                        <div>
+                            <label class="code-font" style="font-size: 0.7rem; color: var(--accent-blue); display: block; margin-bottom: 0.5rem;">ENDPOINT_ADDR</label>
+                            <input type="email" placeholder="email@address.com" required style="width: 100%; background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; color: white; outline: none;">
+                        </div>
                     </div>
-                    <textarea rows="5" placeholder="Payload / Message" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; color: white;"></textarea>
-                    <button type="submit" class="btn btn-primary" style="justify-content: center;">[ BROADCAST_SIGNAL ]</button>
+                    <div>
+                        <label class="code-font" style="font-size: 0.7rem; color: var(--accent-blue); display: block; margin-bottom: 0.5rem;">COMMUNICATION_PAYLOAD</label>
+                        <textarea rows="5" placeholder="Reason for contact / Project details..." required style="width: 100%; background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; color: white; outline: none;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">[ BROADCAST_SIGNAL ]</button>
                 </form>
             </div>
         </section>
