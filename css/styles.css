@@ -14,10 +14,20 @@
     --radius: 16px;
 }
 
+[data-theme="light"] {
+    --bg-dark: #F8FAFC;
+    --surface: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --border: rgba(56, 189, 248, 0.2);
+    --glass-bg: rgba(248, 250, 252, 0.8);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {

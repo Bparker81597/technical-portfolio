@@ -1,10 +1,33 @@
 import { initAnimations } from './animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('BRITTANY_SYSTEM :: INITIALIZED');
-    
+    console.log('PTL_SYSTEM :: INITIALIZED');
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Check for saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+    }
+
     // Initialize Animations
-    initAnimations();
+...
 
     // Smooth Scrolling for Nav Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

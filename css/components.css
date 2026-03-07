@@ -41,9 +41,35 @@
 .nav-menu {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
     list-style: none;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-blue);
+    transform: scale(1.1);
+}
+
+[data-theme="light"] .hero-full-logo,
+[data-theme="light"] .monogram {
+    filter: invert(1) hue-rotate(180deg) brightness(0.8);
 }
 
 .nav-link:hover {
