@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/technical-portfolio/',
+  base: '/ParkerTechLab-portfolio/',
   build: {
     outDir: 'dist',
     rollupOptions: {
