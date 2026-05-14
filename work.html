@@ -1,147 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selected digital work from Parker Tech Lab, including websites, redesigns, and interface concepts.">
+    <meta name="description" content="Selected work and case studies from Parker Tech Lab.">
     <title>Work | Parker Tech Lab</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#0b1326",
+                        "tertiary-fixed-dim": "#d0bcff",
+                        "on-error": "#690005",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-high": "#222a3d",
+                        "surface-container-low": "#131b2e",
+                        "secondary-container": "#00a1a0",
+                        "surface-tint": "#b4c5ff",
+                        "on-secondary-fixed-variant": "#00504f",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#7d4ce7",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary": "#3c0091",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed": "#002020",
+                        "secondary-fixed-dim": "#5ed9d7",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#060e20",
+                        primary: "#b4c5ff",
+                        "surface-variant": "#2d3449",
+                        "tertiary-fixed": "#e9ddff",
+                        "on-tertiary-container": "#f6edff",
+                        "on-primary": "#002a78",
+                        "surface-dim": "#0b1326",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-tertiary-fixed-variant": "#5516be",
+                        "on-primary-container": "#eeefff",
+                        "primary-container": "#2563eb",
+                        error: "#ffb4ab",
+                        "secondary-fixed": "#7df5f4",
+                        "inverse-surface": "#dae2fd",
+                        tertiary: "#d0bcff",
+                        "on-secondary-container": "#002f2f",
+                        "surface-bright": "#31394d",
+                        "error-container": "#93000a",
+                        background: "#0b1326",
+                        "on-primary-fixed": "#00174b",
+                        secondary: "#5ed9d7",
+                        "surface-container": "#171f33",
+                        outline: "#8d90a0",
+                        "on-surface": "#dae2fd",
+                        "on-tertiary-fixed": "#23005c",
+                        "on-secondary": "#003736",
+                        "inverse-primary": "#0053db",
+                        "surface-container-highest": "#2d3449"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-md": "16px",
+                        "section-gap": "120px",
+                        "stack-lg": "32px",
+                        unit: "4px",
+                        "stack-sm": "8px",
+                        gutter: "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "display-md": ["Space Grotesk", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Space Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "display-lg": ["Space Grotesk", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-md": ["48px", { lineHeight: "1.2", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 40px rgba(180, 197, 255, 0.15);
+        }
+    </style>
 </head>
-<body>
-    <div class="site-shell">
-        <header class="navbar">
-            <div class="container nav-container">
-                <a href="index.html" class="brand-logo" aria-label="Parker Tech Lab home">Parker Tech <span>Lab</span></a>
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="nav-panel" id="nav-menu" aria-label="Primary">
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="services.html" class="nav-link">Services</a></li>
-                        <li><a href="work.html" class="nav-link active">Work</a></li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary nav-cta">Start a Project</a>
-                </nav>
+<body class="overflow-x-hidden font-body-md text-body-md">
+    <nav class="fixed top-0 z-50 w-full border-b border-white/10 bg-surface/60 shadow-2xl shadow-surface-container-lowest/50 backdrop-blur-xl">
+        <div class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
+            <a class="font-display-md text-headline-lg font-bold tracking-tighter text-on-surface" href="index.html">Parker Tech Lab</a>
+            <div class="hidden items-center gap-stack-lg md:flex">
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="services.html">Services</a>
+                <a class="border-b-2 border-primary pb-1 font-label-md text-label-md text-primary" href="work.html">Work</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="interactive.html">Interactive</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="about.html">About</a>
             </div>
-        </header>
+            <a class="rounded-lg bg-primary px-6 py-2 font-label-md text-label-md text-on-primary transition-all duration-200 ease-out hover:scale-95" href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-        <main>
-            <section class="page-hero section-padding">
-                <div class="container page-hero-content">
-                    <span class="eyebrow">Work</span>
-                    <h1>Selected digital work shaped with polish, structure, and business intent.</h1>
-                    <p>Each project is designed to help a brand communicate more clearly, feel more credible, and create momentum online.</p>
+    <main class="pt-20">
+        <section class="relative flex min-h-[716px] items-center justify-center overflow-hidden px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute left-1/4 top-1/4 h-[40rem] w-[40rem] rounded-full bg-primary/10 blur-[120px]"></div>
+                <div class="absolute bottom-1/4 right-1/4 h-[30rem] w-[30rem] rounded-full bg-secondary/10 blur-[100px]"></div>
+            </div>
+            <div class="relative z-10 w-full max-w-container-max text-center">
+                <div class="mb-stack-md inline-flex items-center gap-2 rounded-full border border-white/5 bg-surface-variant/40 px-4 py-1 backdrop-blur-md">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant">PORTFOLIO 2024</span>
                 </div>
-            </section>
-
-            <section class="section-padding section-surface">
-                <div class="container">
-                    <div class="section-heading">
-                        <span class="eyebrow">Project Grid</span>
-                        <h2>A mix of website design, digital product concepts, and brand-forward frontend work.</h2>
-                    </div>
-                    <div class="card-grid card-grid-three">
-                        <article class="card project-card">
-                            <span class="project-tag">Luxury E-Commerce</span>
-                            <h3>Rubbed In Diamonds</h3>
-                            <p>Premium product storytelling and polished storefront design for a luxury-inspired retail experience.</p>
-                            <div class="project-links">
-                                <a href="https://bparker81597.github.io/rubbed-in-diamonds/" target="_blank" rel="noreferrer">Live</a>
-                            </div>
-                        </article>
-                        <article class="card project-card">
-                            <span class="project-tag">Service Brand</span>
-                            <h3>Agency Website Systems</h3>
-                            <p>Modern multi-section marketing sites designed for stronger positioning and cleaner conversion paths.</p>
-                            <div class="project-links">
-                                <a href="contact.html">Discuss a Similar Build</a>
-                            </div>
-                        </article>
-                        <article class="card project-card">
-                            <span class="project-tag">Frontend Concepts</span>
-                            <h3>Dashboard Interfaces</h3>
-                            <p>Interface concepts built with strong information hierarchy, visual calm, and scalable component structure.</p>
-                            <div class="project-links">
-                                <a href="contact.html">Request a Concept Sprint</a>
-                            </div>
-                        </article>
-                    </div>
+                <h1 class="mb-stack-lg font-display-lg text-5xl leading-tight text-on-surface md:text-display-lg">The Proof of <br class="hidden md:block"><span class="text-primary">Innovation.</span></h1>
+                <p class="mx-auto mb-stack-lg max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
+                    A curated collection of digital experiences, interactive systems, and high-performance solutions engineered for the modern frontier.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a class="hover-glow rounded-xl bg-primary px-8 py-4 font-label-md text-label-md text-on-primary transition-all" href="contact.html">Explore Case Studies</a>
+                    <a class="glass-card rounded-xl px-8 py-4 font-label-md text-label-md text-on-surface transition-all" href="interactive.html">View Lab Experiments</a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section-padding">
-                <div class="container">
-                    <article class="feature-highlight">
-                        <div class="feature-copy">
-                            <span class="eyebrow">Featured Project</span>
-                            <h2>Smart Financial Tool</h2>
-                            <p>A modern financial dashboard concept designed to simplify money management with clean UI and scalable frontend structure.</p>
-                            <div class="feature-actions">
-                                <a href="https://bparker81597.github.io/smart-finance-dashboard/" target="_blank" rel="noreferrer" class="btn btn-primary">View Live Project</a>
-                                <a href="https://github.com/Bparker81597/smart-finance-dashboard" target="_blank" rel="noreferrer" class="btn btn-secondary">View Code</a>
-                            </div>
-                        </div>
-                        <div class="feature-panel">
-                            <div class="feature-stat">
-                                <strong>Clean UI</strong>
-                                <span>Structured dashboard cards and readable hierarchy.</span>
-                            </div>
-                            <div class="feature-stat">
-                                <strong>Scalable Frontend</strong>
-                                <span>Component-minded layout patterns suited for future product growth.</span>
-                            </div>
-                            <div class="feature-stat">
-                                <strong>Product-Led Visuals</strong>
-                                <span>Balanced contrast, spacing, and data presentation.</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="cta-banner">
-                        <div>
-                            <span class="eyebrow">Next Build</span>
-                            <h2>Need a website or interface concept that feels sharper than a standard template?</h2>
-                        </div>
-                        <a href="contact.html" class="btn btn-primary">Start a Project</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container footer-grid">
+        <section class="mx-auto max-w-container-max px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="mb-section-gap flex flex-col gap-stack-lg md:flex-row md:items-end md:justify-between">
                 <div>
-                    <a href="index.html" class="footer-logo">Parker Tech Lab</a>
-                    <p class="footer-tagline">Modern Web Design • Automation • AI Systems</p>
+                    <h2 class="mb-stack-sm font-headline-lg text-headline-lg text-on-surface">Selected Work</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Pushing the boundaries of what's possible.</p>
                 </div>
-                <nav class="footer-nav" aria-label="Footer">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="work.html">Work</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <div class="footer-socials" aria-label="Social links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">GitHub</a>
+                <div class="flex flex-wrap gap-2">
+                    <button class="rounded-full bg-primary px-6 py-2 font-label-md text-label-md text-on-primary" type="button">All Projects</button>
+                    <button class="glass-card rounded-full px-6 py-2 font-label-md text-label-md text-on-surface-variant transition-all hover:text-on-surface" type="button">FinTech</button>
+                    <button class="glass-card rounded-full px-6 py-2 font-label-md text-label-md text-on-surface-variant transition-all hover:text-on-surface" type="button">AI/ML</button>
+                    <button class="glass-card rounded-full px-6 py-2 font-label-md text-label-md text-on-surface-variant transition-all hover:text-on-surface" type="button">Interactive</button>
+                    <button class="glass-card rounded-full px-6 py-2 font-label-md text-label-md text-on-surface-variant transition-all hover:text-on-surface" type="button">Design Systems</button>
                 </div>
             </div>
-            <div class="container footer-bottom">
-                <p>© 2026 Parker Tech Lab. All rights reserved.</p>
+            <div class="grid grid-cols-1 gap-gutter md:grid-cols-12">
+                <article class="glass-card group relative overflow-hidden rounded-xl transition-all duration-500 hover:scale-[1.01] md:col-span-7">
+                    <div class="aspect-[16/10] overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSwReBQeKHocoBsyRvyIZfJc7_xqX1zXGZ9m-re_lQY9XGAaUXEoNEPhtBE4ljooiNqcVzCHI7e2GMo1GT9HbbigUiujqnRvpSxqltVhlpLI3rzhn7XBksP9YQx4sie_KRPRszQeAyJu3U93137bhrTdaZVBaV4JcVB1yRM1Qy3B1SM53ypoFspf4jqLs_T4pbAfgK64WcC0kqukm4EM6t3-EHZWlVNMQmj_C1Xhg2swn72Vh7EqFQXALfIG9V7s-eSgSBTXOWEf4" alt="A sophisticated data visualization dashboard showing complex financial trends with glowing neon blue lines.">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-stack-lg">
+                        <span class="mb-stack-sm inline-block rounded-full bg-primary/10 px-3 py-1 font-label-md text-label-md text-primary">FinTech Solution</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Smart Financial Tool</h3>
+                        <p class="mb-stack-md max-w-md font-body-md text-body-md text-on-surface-variant">Next-generation wealth management platform utilizing predictive analytics and real-time data streaming.</p>
+                        <a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:underline" href="contact.html">View Case Study <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                    </div>
+                </article>
+                <article class="glass-card group relative overflow-hidden rounded-xl transition-all duration-500 hover:scale-[1.01] md:col-span-5">
+                    <div class="aspect-square overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnxusJQinefYS8CL-ysqUQeBhwR4LrGslCSZQhK0LGn0-aTkvoRgZtA0Zw1RLkJGcqfxSB-bC0EjrS7CCeKBCiX-RcXoieCajXtEaGNEJo4NppnYtSnQtZHPGIqHV_l3gsDd0ZRGKCC6vLWWjOzLUUXQAklzEsk86i3MAwU9kMjqtButrqnjvg1DhjdJ3ooRFwKDg2kROi-vMf8Rs97vU7VS9jKRZb4HRMULzTikY2SuvqC5GKwxTYTy182EtOOwQvXedduMCCpn8" alt="A macro shot of a glowing computer circuit board with violet and electric blue light trails.">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-stack-lg">
+                        <span class="mb-stack-sm inline-block rounded-full bg-tertiary/10 px-3 py-1 font-label-md text-label-md text-tertiary">Developer Tools</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Codeverse</h3>
+                        <p class="mb-stack-md font-body-md text-body-md text-on-surface-variant">A collaborative 3D environment for visualizing massive software architectures in real-time.</p>
+                        <a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:underline" href="interactive.html">View Case Study <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                    </div>
+                </article>
+                <article class="glass-card group relative overflow-hidden rounded-xl transition-all duration-500 hover:scale-[1.01] md:col-span-5">
+                    <div class="aspect-square overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASjAQBEvm4FxBHvi7i5vi3roxJvNTgUCxvIqpPRw7aa9H0q-Ak7L8vztjTnozhrvtfoHolEFJAG5pcoqRnD8gxRp6glzyM4Mubyq6Yh7hAvA57IW9O3kyVRINf1Y7_xemE1Yc1bkm4cLQYTcbsvH96RwT2JmCqh1Va59B12EiDlCsf5Rx-wlOiPfOUV-gtxLD6oPKOV1Tb7MQKsgwm45BSSNpKZoO25KEnn2WcL5KXuZBqtrZRRhBQAzRnV8-VKj6Amzx50DJF7HM" alt="Abstract representation of artificial intelligence as a shimmering iridescent fluid sphere.">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-stack-lg">
+                        <span class="mb-stack-sm inline-block rounded-full bg-secondary/10 px-3 py-1 font-label-md text-label-md text-secondary">Automation &amp; AI</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">AutoNateAI</h3>
+                        <p class="mb-stack-md font-body-md text-body-md text-on-surface-variant">Enterprise workflow automation driven by bespoke LLMs and autonomous agent networks.</p>
+                        <a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:underline" href="contact.html">View Case Study <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                    </div>
+                </article>
+                <article class="glass-card group relative overflow-hidden rounded-xl transition-all duration-500 hover:scale-[1.01] md:col-span-7">
+                    <div class="aspect-[16/10] overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBWegpvAziCyS33uODifBY2mpvFeBx1cgjJsu-7UZYaJAPsrpidh3RCy3PM1MkgHZImdISScAbl_ia4I6zpjfVlJyusIX1TOa2TRM0571P4Gyz6CkWyr-OIyK9TKwQfXTOTOIqgdt2CIdAy7zaBYLgiUeOE2WsgCmGiBGfSv4mpSWUclsDBfUNSv9mXQmya-g6imMYzgJh9Q4yshY08B9RODLwhQqcHFYOIpdp7Y11S1CPuWKV1sW11DkW5r8eobfYwpGEtd3Hc6I" alt="A gallery of floating minimalist UI components arranged in a clean grid-like structure.">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-stack-lg">
+                        <span class="mb-stack-sm inline-block rounded-full bg-primary/10 px-3 py-1 font-label-md text-label-md text-primary">Design Systems</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Creative UI Systems</h3>
+                        <p class="mb-stack-md max-w-md font-body-md text-body-md text-on-surface-variant">Scalable design infrastructure built for performance and accessibility across multi-platform ecosystems.</p>
+                        <a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:underline" href="contact.html">View Case Study <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+                    </div>
+                </article>
             </div>
-        </footer>
-    </div>
+        </section>
 
-    <script src="js/script.js"></script>
+        <section class="px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="relative mx-auto flex max-w-container-max flex-col items-center overflow-hidden rounded-[2rem] bg-primary-container p-12 text-center md:p-24">
+                <div class="absolute right-0 top-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/30 blur-[100px]"></div>
+                <div class="absolute bottom-0 left-0 h-96 w-96 -translate-x-1/2 translate-y-1/2 rounded-full bg-on-primary-container/20 blur-[100px]"></div>
+                <h2 class="relative z-10 mb-stack-lg font-display-md text-display-md text-on-primary-container">Ready to build the future?</h2>
+                <p class="relative z-10 mb-stack-lg max-w-xl font-body-lg text-body-lg text-on-primary-container/80">
+                    We're looking for visionary partners to push the boundaries of digital craft. Let's start your project today.
+                </p>
+                <div class="relative z-10 flex gap-4">
+                    <a class="rounded-xl bg-on-primary-container px-10 py-5 font-label-md text-label-md text-primary-container transition-all hover:scale-105" href="contact.html">Start a Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full border-t border-white/5 bg-surface-container-lowest py-stack-lg">
+        <div class="mx-auto flex max-w-container-max flex-col items-start justify-between gap-stack-lg px-margin-mobile md:flex-row md:px-margin-desktop">
+            <div class="space-y-stack-md">
+                <span class="font-display-md text-headline-lg font-bold text-on-surface">Parker Tech Lab</span>
+                <p class="max-w-xs font-body-md text-body-md text-on-surface-variant">© 2026 Parker Tech Lab. Creative Excellence in Tech.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-stack-lg md:grid-cols-4 md:gap-gutter">
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md text-on-surface">Company</span>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="about.html">About</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Careers</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Press Kit</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md text-on-surface">Connect</span>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="https://x.com" target="_blank" rel="noreferrer">Twitter</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md text-on-surface">Legal</span>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Privacy Policy</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Terms of Service</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md text-on-surface">Newsletter</span>
+                    <div class="flex">
+                        <input class="w-full rounded-l-lg bg-surface-variant px-4 py-2 text-label-md focus:ring-1 focus:ring-primary" placeholder="Email" type="email">
+                        <button class="rounded-r-lg bg-primary px-4 py-2 text-on-primary" type="button"><span class="material-symbols-outlined text-[18px]">send</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

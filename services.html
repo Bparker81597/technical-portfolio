@@ -1,154 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Parker Tech Lab services including website design, redesign, automation, and AI integrations.">
+    <meta name="description" content="Services offered by Parker Tech Lab across web design, automation, AI, and interactive systems.">
     <title>Services | Parker Tech Lab</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#0b1326",
+                        "tertiary-fixed-dim": "#d0bcff",
+                        "on-error": "#690005",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-high": "#222a3d",
+                        "surface-container-low": "#131b2e",
+                        "secondary-container": "#00a1a0",
+                        "surface-tint": "#b4c5ff",
+                        "on-secondary-fixed-variant": "#00504f",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#7d4ce7",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary": "#3c0091",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed": "#002020",
+                        "secondary-fixed-dim": "#5ed9d7",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#060e20",
+                        primary: "#b4c5ff",
+                        "surface-variant": "#2d3449",
+                        "tertiary-fixed": "#e9ddff",
+                        "on-tertiary-container": "#f6edff",
+                        "on-primary": "#002a78",
+                        "surface-dim": "#0b1326",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-tertiary-fixed-variant": "#5516be",
+                        "on-primary-container": "#eeefff",
+                        "primary-container": "#2563eb",
+                        error: "#ffb4ab",
+                        "secondary-fixed": "#7df5f4",
+                        "inverse-surface": "#dae2fd",
+                        tertiary: "#d0bcff",
+                        "on-secondary-container": "#002f2f",
+                        "surface-bright": "#31394d",
+                        "error-container": "#93000a",
+                        background: "#0b1326",
+                        "on-primary-fixed": "#00174b",
+                        secondary: "#5ed9d7",
+                        "surface-container": "#171f33",
+                        outline: "#8d90a0",
+                        "on-surface": "#dae2fd",
+                        "on-tertiary-fixed": "#23005c",
+                        "on-secondary": "#003736",
+                        "inverse-primary": "#0053db",
+                        "surface-container-highest": "#2d3449"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-md": "16px",
+                        "section-gap": "120px",
+                        "stack-lg": "32px",
+                        unit: "4px",
+                        "stack-sm": "8px",
+                        gutter: "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "display-md": ["Space Grotesk", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Space Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "display-lg": ["Space Grotesk", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-md": ["48px", { lineHeight: "1.2", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+        }
+    </style>
 </head>
-<body>
-    <div class="site-shell">
-        <header class="navbar">
-            <div class="container nav-container">
-                <a href="index.html" class="brand-logo" aria-label="Parker Tech Lab home">Parker Tech <span>Lab</span></a>
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="nav-panel" id="nav-menu" aria-label="Primary">
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="services.html" class="nav-link active">Services</a></li>
-                        <li><a href="work.html" class="nav-link">Work</a></li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary nav-cta">Start a Project</a>
-                </nav>
+<body class="overflow-x-hidden bg-surface font-body-md text-on-surface">
+    <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-surface/60 shadow-2xl shadow-surface-container-lowest/50 backdrop-blur-xl">
+        <nav class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
+            <a class="font-display-md text-headline-lg font-bold tracking-tighter text-on-surface" href="index.html">Parker Tech Lab</a>
+            <div class="hidden items-center gap-8 md:flex">
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="index.html">Home</a>
+                <a class="border-b-2 border-primary pb-1 font-label-md text-label-md text-primary" href="services.html">Services</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="work.html">Work</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="interactive.html">Interactive</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="about.html">About</a>
             </div>
-        </header>
+            <a class="rounded-lg bg-primary-container px-6 py-2 font-label-md text-label-md text-on-primary-container transition-all duration-200 ease-out hover:scale-95" href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <main>
-            <section class="page-hero section-padding">
-                <div class="container page-hero-content">
-                    <span class="eyebrow">Services</span>
-                    <h1>Digital services designed to make your brand look sharper and operate smarter.</h1>
-                    <p>Every service is built around clarity, usability, and scalable execution so your website can support growth instead of slowing it down.</p>
+    <main class="pt-20">
+        <section class="hero-gradient relative flex min-h-[716px] items-center justify-center overflow-hidden py-section-gap">
+            <div class="z-10 mx-auto max-w-container-max px-margin-mobile text-center md:px-margin-desktop">
+                <div class="mb-stack-md inline-block rounded-full border border-primary/20 bg-primary/10 px-4 py-1 font-label-md text-label-md text-primary">OUR CAPABILITIES</div>
+                <h1 class="mx-auto mb-stack-lg max-w-4xl font-display-md text-5xl leading-tight tracking-tighter md:text-display-lg">
+                    Where Strategy Meets <span class="text-primary">Innovation.</span>
+                </h1>
+                <p class="mx-auto mb-10 max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
+                    We engineer high-performance digital ecosystems that bridge the gap between enterprise reliability and avant-garde interactive design.
+                </p>
+                <div class="flex flex-col justify-center gap-4 sm:flex-row">
+                    <a class="rounded-lg bg-primary px-8 py-4 font-label-md text-label-md font-bold text-on-primary shadow-[0_0_30px_rgba(180,197,255,0.15)]" href="contact.html">Explore Services</a>
+                    <a class="glass-card rounded-lg px-8 py-4 font-label-md text-label-md font-bold text-on-surface" href="work.html">View Case Studies</a>
                 </div>
-            </section>
+            </div>
+            <div class="absolute inset-0 -z-10 opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface"></div>
+                <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnLYpxcDYZMVRj6zcRcKvN6BsC7DbRAolx49-2m3sXBGRHYc4CosTLrjYeMC7xiCOL-pNWTer0O3ralH3o-XPGH3rG9M0TPZN7Ck79uiMr9xTiTUOgyO9KqrwXWjQUjX38mSpA6P8zd8ux-Fsu-nYTKCD2I0lebQ4t9S9yJN8HeCkcYcrlhP_2UPZJKLyUX_7xAxIhTTz-Zp3-I9UWaQWzsMgd0YFY9oxRzdEs0w11Wyw1mWOD2W6HFMlw-OmSEOWnyecqqnQGz1U" alt="A cinematic digital landscape featuring abstract patterns of flowing blue data streams.">
+            </div>
+        </section>
 
-            <section class="section-padding section-surface">
-                <div class="container">
-                    <div class="section-heading">
-                        <span class="eyebrow">Services Grid</span>
-                        <h2>Six core offers built for modern businesses.</h2>
-                    </div>
-                    <div class="card-grid card-grid-three">
-                        <article class="card service-card">
-                            <span class="card-icon">01</span>
-                            <h3>Custom Website Design</h3>
-                            <p>Original website experiences shaped around your messaging, goals, and brand presence.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">02</span>
-                            <h3>Website Redesign</h3>
-                            <p>Strategic overhauls for websites that feel outdated, cluttered, or underperforming.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">03</span>
-                            <h3>Landing Pages</h3>
-                            <p>High-converting campaign and offer pages designed to support launches and lead generation.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">04</span>
-                            <h3>AI Integrations</h3>
-                            <p>Useful AI features, assistants, and workflows that add practical value to your operations.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">05</span>
-                            <h3>Automation Systems</h3>
-                            <p>Connected systems that reduce repetitive tasks and improve internal handoffs.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">06</span>
-                            <h3>Ongoing Support</h3>
-                            <p>Reliable post-launch updates, design refinements, and technical upkeep as your business evolves.</p>
-                        </article>
-                    </div>
+        <section class="bg-surface py-section-gap">
+            <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
+                <div class="mb-section-gap">
+                    <h2 class="mb-stack-md font-display-md text-display-md">Full Spectrum Execution</h2>
+                    <p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant">From pixel-perfect interfaces to deep AI integrations, we build the tools of tomorrow today.</p>
                 </div>
-            </section>
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="section-heading">
-                        <span class="eyebrow">Process</span>
-                        <h2>A four-step process built to keep projects clear and moving.</h2>
-                    </div>
-                    <div class="process-grid">
-                        <article class="card process-card">
-                            <span class="process-number">01</span>
-                            <h3>Discovery</h3>
-                            <p>We align on goals, offers, audience, and the gaps your current site or system needs to solve.</p>
-                        </article>
-                        <article class="card process-card">
-                            <span class="process-number">02</span>
-                            <h3>Direction</h3>
-                            <p>We shape the structure, design direction, and priorities before build work begins.</p>
-                        </article>
-                        <article class="card process-card">
-                            <span class="process-number">03</span>
-                            <h3>Build</h3>
-                            <p>The site is designed and developed with responsive layouts, refined UI, and clean implementation.</p>
-                        </article>
-                        <article class="card process-card">
-                            <span class="process-number">04</span>
-                            <h3>Launch & Support</h3>
-                            <p>After review and polish, the project goes live with room for future growth and support.</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="cta-banner">
-                        <div>
-                            <span class="eyebrow">Ready to Build</span>
-                            <h2>Need a service package tailored to your next launch, redesign, or system upgrade?</h2>
+                <div class="grid grid-cols-1 gap-gutter md:grid-cols-2 lg:grid-cols-4">
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 bg-primary-container/20">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">web_asset</span>
                         </div>
-                        <a href="contact.html" class="btn btn-primary">Start a Project</a>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">Web Design</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">High-fidelity visual storytelling that balances brand identity with elite user experience.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-primary">VALUE: BRAND PRESTIGE</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-secondary/20 bg-secondary-container/20">
+                            <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1">refresh</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">Redesign</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Transforming legacy systems into modern, high-performance engines of growth.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-secondary">VALUE: LEGACY MODERNIZATION</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-tertiary/20 bg-tertiary-container/20">
+                            <span class="material-symbols-outlined text-tertiary" style="font-variation-settings:'FILL' 1">code</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">Frontend Dev</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Performant, responsive, and secure frontend architectures built on modern stacks.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-tertiary">VALUE: PERFORMANCE SPEED</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 bg-primary-container/20">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">settings_suggest</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">Automation</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Streamlining operations through custom workflows and intelligent system logic.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-primary">VALUE: OPERATIONAL ROI</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-secondary/20 bg-secondary-container/20">
+                            <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1">psychology</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">AI Integrations</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Integrating Large Language Models and custom neural networks into business logic.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-secondary">VALUE: FUTURE PROOFING</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-tertiary/20 bg-tertiary-container/20">
+                            <span class="material-symbols-outlined text-tertiary" style="font-variation-settings:'FILL' 1">view_in_ar</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">Interactive</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Immersive web-based environments that push the boundaries of digital engagement.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-tertiary">VALUE: PEAK ENGAGEMENT</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 bg-primary-container/20">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">sports_esports</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">Game Design</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Translating game mechanics into product design for superior retention and joy.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-primary">VALUE: USER RETENTION</span>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl p-stack-lg transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-stack-lg flex h-12 w-12 items-center justify-center rounded-lg border border-secondary/20 bg-secondary-container/20">
+                            <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1">architecture</span>
+                        </div>
+                        <h3 class="mb-stack-sm font-headline-lg text-headline-lg">UX Strategy</h3>
+                        <p class="mb-stack-lg font-body-md text-body-md text-on-surface-variant">Data-driven research and strategic mapping for complex user journeys.</p>
+                        <div class="border-t border-white/10 pt-stack-md">
+                            <span class="font-label-md text-label-md text-secondary">VALUE: STRATEGIC CLARITY</span>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <footer class="footer">
-            <div class="container footer-grid">
-                <div>
-                    <a href="index.html" class="footer-logo">Parker Tech Lab</a>
-                    <p class="footer-tagline">Modern Web Design • Automation • AI Systems</p>
+        <section class="overflow-hidden bg-surface-container-low py-section-gap">
+            <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
+                <div class="mb-section-gap text-center">
+                    <h2 class="mb-stack-md font-display-md text-display-md">The Workflow</h2>
+                    <p class="mx-auto max-w-xl font-body-lg text-body-lg text-on-surface-variant">A precision-engineered approach to creative problem-solving.</p>
                 </div>
-                <nav class="footer-nav" aria-label="Footer">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="work.html">Work</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <div class="footer-socials" aria-label="Social links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">GitHub</a>
+                <div class="relative grid grid-cols-1 gap-gutter md:grid-cols-4">
+                    <div class="absolute left-0 top-12 hidden h-[1px] w-full -z-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent md:block"></div>
+                    <div class="relative z-10 flex flex-col items-center md:items-start">
+                        <div class="mb-stack-lg flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-surface font-display-md text-headline-lg text-primary">1</div>
+                        <h4 class="mb-stack-sm font-headline-lg text-headline-lg">Discovery</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Defining project scope, business objectives, and technical constraints.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-start">
+                        <div class="mb-stack-lg flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-surface font-display-md text-headline-lg text-primary">2</div>
+                        <h4 class="mb-stack-sm font-headline-lg text-headline-lg">Strategy</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Mapping the blueprint and selecting the optimal technology stack.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-start">
+                        <div class="mb-stack-lg flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-surface font-display-md text-headline-lg text-primary">3</div>
+                        <h4 class="mb-stack-sm font-headline-lg text-headline-lg">Execution</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Iterative development with high-frequency feedback loops.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center md:items-start">
+                        <div class="mb-stack-lg flex h-14 w-14 items-center justify-center rounded-full border border-primary/40 bg-surface font-display-md text-headline-lg text-primary">4</div>
+                        <h4 class="mb-stack-sm font-headline-lg text-headline-lg">Evolution</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Deployment and continuous refinement for peak performance.</p>
+                    </div>
                 </div>
             </div>
-            <div class="container footer-bottom">
-                <p>© 2026 Parker Tech Lab. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
+        </section>
 
-    <script src="js/script.js"></script>
+        <section class="py-section-gap">
+            <div class="mx-auto max-w-container-max px-margin-mobile text-center md:px-margin-desktop">
+                <h2 class="mb-12 font-label-md text-label-md uppercase tracking-widest text-primary">THE TECHNOLOGY CORE</h2>
+                <div class="grid grid-cols-2 items-center justify-items-center gap-stack-lg opacity-60 md:grid-cols-4 lg:grid-cols-6">
+                    <div class="flex flex-col items-center gap-2"><span class="material-symbols-outlined text-4xl">automation</span><span class="font-label-md text-xs">AI ENGINE</span></div>
+                    <div class="flex flex-col items-center gap-2"><span class="material-symbols-outlined text-4xl">terminal</span><span class="font-label-md text-xs">REACT</span></div>
+                    <div class="flex flex-col items-center gap-2"><span class="material-symbols-outlined text-4xl">videogame_asset</span><span class="font-label-md text-xs">UNREAL ENGINE</span></div>
+                    <div class="flex flex-col items-center gap-2"><span class="material-symbols-outlined text-4xl">cloud</span><span class="font-label-md text-xs">AZURE</span></div>
+                    <div class="flex flex-col items-center gap-2"><span class="material-symbols-outlined text-4xl">database</span><span class="font-label-md text-xs">POSTGRES</span></div>
+                    <div class="flex flex-col items-center gap-2"><span class="material-symbols-outlined text-4xl">shield</span><span class="font-label-md text-xs">SECURITY+</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="glass-card relative mx-auto max-w-container-max overflow-hidden rounded-3xl p-12 text-center md:p-24">
+                <div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                <h2 class="mb-stack-lg font-display-md text-display-md">Ready to Build the Future?</h2>
+                <p class="mx-auto mb-10 max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
+                    Whether you're an enterprise leader or a visionary startup, we have the technical prowess to realize your most ambitious digital goals.
+                </p>
+                <a class="rounded-lg bg-primary px-10 py-5 font-label-md text-label-md font-bold text-on-primary transition-transform hover:scale-105" href="contact.html">Schedule a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full border-t border-white/5 bg-surface-container-lowest py-stack-lg">
+        <div class="mx-auto flex max-w-container-max flex-col items-start justify-between gap-stack-lg px-margin-mobile md:flex-row md:px-margin-desktop">
+            <div class="flex flex-col gap-4">
+                <div class="font-display-md text-headline-lg font-bold text-on-surface">Parker Tech Lab</div>
+                <p class="max-w-xs font-body-md text-body-md text-on-surface-variant">© 2026 Parker Tech Lab. Creative Excellence in Tech.</p>
+            </div>
+            <div class="flex flex-wrap gap-12">
+                <div class="flex flex-col gap-4">
+                    <span class="font-label-md text-primary">RESOURCES</span>
+                    <a class="font-body-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="interactive.html">Interactive</a>
+                    <a class="font-body-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Press Kit</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <span class="font-label-md text-primary">LEGAL</span>
+                    <a class="font-body-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Privacy Policy</a>
+                    <a class="font-body-md text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

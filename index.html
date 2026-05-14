@@ -1,211 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Parker Tech Lab builds modern websites, redesigns, and digital systems for growing businesses.">
-    <title>Parker Tech Lab | Modern Web Design & Digital Systems</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Parker Tech Lab builds strategic websites, AI systems, and interactive digital experiences.">
+    <title>Home | Parker Tech Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#0b1326",
+                        "tertiary-fixed-dim": "#d0bcff",
+                        "on-error": "#690005",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-high": "#222a3d",
+                        "surface-container-low": "#131b2e",
+                        "secondary-container": "#00a1a0",
+                        "surface-tint": "#b4c5ff",
+                        "on-secondary-fixed-variant": "#00504f",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#7d4ce7",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary": "#3c0091",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed": "#002020",
+                        "secondary-fixed-dim": "#5ed9d7",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#060e20",
+                        primary: "#b4c5ff",
+                        "surface-variant": "#2d3449",
+                        "tertiary-fixed": "#e9ddff",
+                        "on-tertiary-container": "#f6edff",
+                        "on-primary": "#002a78",
+                        "surface-dim": "#0b1326",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-tertiary-fixed-variant": "#5516be",
+                        "on-primary-container": "#eeefff",
+                        "primary-container": "#2563eb",
+                        error: "#ffb4ab",
+                        "secondary-fixed": "#7df5f4",
+                        "inverse-surface": "#dae2fd",
+                        tertiary: "#d0bcff",
+                        "on-secondary-container": "#002f2f",
+                        "surface-bright": "#31394d",
+                        "error-container": "#93000a",
+                        background: "#0b1326",
+                        "on-primary-fixed": "#00174b",
+                        secondary: "#5ed9d7",
+                        "surface-container": "#171f33",
+                        outline: "#8d90a0",
+                        "on-surface": "#dae2fd",
+                        "on-tertiary-fixed": "#23005c",
+                        "on-secondary": "#003736",
+                        "inverse-primary": "#0053db",
+                        "surface-container-highest": "#2d3449"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-md": "16px",
+                        "section-gap": "120px",
+                        "stack-lg": "32px",
+                        unit: "4px",
+                        "stack-sm": "8px",
+                        gutter: "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "display-md": ["Space Grotesk", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Space Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "display-lg": ["Space Grotesk", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-md": ["48px", { lineHeight: "1.2", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <div class="site-shell">
-        <header class="navbar">
-            <div class="container nav-container">
-                <a href="index.html" class="brand-logo" aria-label="Parker Tech Lab home">Parker Tech <span>Lab</span></a>
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="nav-panel" id="nav-menu" aria-label="Primary">
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link active">Home</a></li>
-                        <li><a href="services.html" class="nav-link">Services</a></li>
-                        <li><a href="work.html" class="nav-link">Work</a></li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary nav-cta">Start a Project</a>
-                </nav>
+<body class="bg-background text-on-surface font-body-md">
+    <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-surface/60 shadow-2xl shadow-surface-container-lowest/50 backdrop-blur-xl">
+        <nav class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
+            <a class="font-display-md text-headline-lg font-bold tracking-tighter text-on-surface" href="index.html">Parker Tech Lab</a>
+            <div class="hidden items-center gap-gutter md:flex">
+                <a class="border-b-2 border-primary pb-1 font-label-md text-label-md text-primary" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="services.html">Services</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="work.html">Work</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="interactive.html">Interactive</a>
+                <a class="font-label-md text-label-md text-on-surface-variant transition-colors hover:text-on-surface" href="about.html">About</a>
             </div>
-        </header>
+            <a class="rounded-full bg-primary px-6 py-2 font-label-md text-label-md text-on-primary transition-all duration-200 ease-out hover:scale-95" href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <main>
-            <section class="hero section-padding">
-                <div class="container hero-grid">
-                    <div class="hero-copy">
-                        <span class="eyebrow">Digital Agency for Growth-Focused Brands</span>
-                        <h1>Modern websites and digital systems built for growth.</h1>
-                        <p class="hero-text">Parker Tech Lab helps businesses design, redesign, and scale their digital presence.</p>
-                        <div class="button-row">
-                            <a href="services.html" class="btn btn-primary">View Services</a>
-                            <a href="work.html" class="btn btn-secondary">See Our Work</a>
-                        </div>
-                        <div class="hero-metrics">
-                            <div class="metric-card">
-                                <strong>Strategy-first</strong>
-                                <span>Positioning, content flow, and conversion planning.</span>
-                            </div>
-                            <div class="metric-card">
-                                <strong>Built to scale</strong>
-                                <span>Modern frontend systems with room for automation and AI.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="visual-frame">
-                            <div class="visual-panel visual-panel-primary">
-                                <span class="visual-label">Launch Dashboard</span>
-                                <strong>Site refresh in progress</strong>
-                                <p>Messaging, UX cleanup, and polished frontend delivery.</p>
-                                <div class="visual-bars">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="visual-panel visual-panel-secondary">
-                                <span class="visual-pill">Automation Ready</span>
-                                <ul class="visual-list">
-                                    <li>Lead capture workflow</li>
-                                    <li>CRM handoff</li>
-                                    <li>Client onboarding</li>
-                                </ul>
-                            </div>
-                            <div class="visual-badge">Modern UI Systems</div>
-                        </div>
+    <main class="pt-20">
+        <section class="relative mx-auto flex min-h-[921px] max-w-container-max items-center overflow-hidden px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="absolute right-0 top-0 -z-10 h-[600px] w-[600px] rounded-full bg-primary/10 blur-[120px]"></div>
+            <div class="absolute bottom-0 left-0 -z-10 h-[400px] w-[400px] rounded-full bg-secondary/10 blur-[100px]"></div>
+            <div class="grid w-full grid-cols-1 items-center gap-gutter md:grid-cols-12">
+                <div class="flex flex-col gap-stack-lg md:col-span-7">
+                    <h1 class="font-display-lg text-5xl leading-tight md:text-display-lg">
+                        Strategic websites, AI systems, and interactive experiences <span class="text-primary">designed for the future.</span>
+                    </h1>
+                    <p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
+                        Parker Tech Lab is a premier digital studio blending avant-garde creative direction with high-performance engineering to build the next generation of the web.
+                    </p>
+                    <div class="flex flex-wrap gap-stack-md">
+                        <a class="rounded-full bg-primary px-8 py-4 font-label-md text-label-md text-on-primary transition-all hover:shadow-[0_0_30px_rgba(180,197,255,0.3)]" href="services.html">Explore Services</a>
+                        <a class="glass-card rounded-full px-8 py-4 font-label-md text-label-md text-on-surface transition-all hover:bg-surface-variant/40" href="work.html">View Our Work</a>
                     </div>
                 </div>
-            </section>
-
-            <section class="section-padding section-surface">
-                <div class="container">
-                    <div class="section-heading">
-                        <span class="eyebrow">Services Preview</span>
-                        <h2>Focused services for brands that need a sharper digital presence.</h2>
-                        <p>From custom design work to automation-minded buildouts, every engagement is tailored to business goals and growth.</p>
-                    </div>
-                    <div class="card-grid card-grid-three">
-                        <article class="card service-card">
-                            <span class="card-icon">01</span>
-                            <h3>Custom Website Design</h3>
-                            <p>Strategic websites shaped around your offer, audience, and brand positioning.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">02</span>
-                            <h3>Website Redesign</h3>
-                            <p>Modern redesigns that improve clarity, trust, and conversion without losing brand equity.</p>
-                        </article>
-                        <article class="card service-card">
-                            <span class="card-icon">03</span>
-                            <h3>Automation & AI Systems</h3>
-                            <p>Smart workflows and intelligent features that reduce manual work and extend site value.</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="section-heading">
-                        <span class="eyebrow">Featured Work</span>
-                        <h2>Recent projects that balance clean design with scalable frontend thinking.</h2>
-                        <p>Parker Tech Lab delivers digital experiences that look polished, communicate clearly, and support long-term growth.</p>
-                    </div>
-                    <div class="card-grid card-grid-featured">
-                        <article class="card project-card project-card-featured">
-                            <span class="project-tag">Highlighted Project</span>
-                            <h3>Smart Financial Tool</h3>
-                            <p>A modern financial dashboard concept designed to simplify money management with clean UI and scalable frontend structure.</p>
-                            <div class="project-links">
-                                <a href="https://bparker81597.github.io/smart-finance-dashboard/" target="_blank" rel="noreferrer">Live</a>
-                                <a href="https://github.com/Bparker81597/smart-finance-dashboard" target="_blank" rel="noreferrer">Code</a>
+                <div class="relative hidden md:col-span-5 md:block">
+                    <div class="relative flex aspect-square w-full items-center justify-center">
+                        <div class="glass-card absolute h-64 w-64 -translate-x-[40px] rotate-[-12deg] rounded-xl opacity-40"></div>
+                        <div class="glass-card absolute h-64 w-64 translate-x-[20px] translate-y-[20px] rotate-[6deg] rounded-xl opacity-70"></div>
+                        <div class="glass-card relative flex h-72 w-72 items-center justify-center rounded-xl border-primary/20 p-stack-lg shadow-2xl">
+                            <div class="text-center">
+                                <img class="mx-auto mb-6 max-h-28 w-auto object-contain" src="assets/images/logo-full.png" alt="Parker Tech Lab logo">
+                                <div class="font-label-md text-label-md uppercase tracking-widest opacity-80">Established 2024</div>
                             </div>
-                        </article>
-                        <article class="card project-card">
-                            <span class="project-tag">Luxury E-Commerce</span>
-                            <h3>Rubbed In Diamonds</h3>
-                            <p>High-polish product storytelling and elevated shopping flows for a premium retail brand.</p>
-                            <div class="project-links">
-                                <a href="work.html">View Work</a>
-                            </div>
-                        </article>
-                        <article class="card project-card">
-                            <span class="project-tag">Agency Systems</span>
-                            <h3>Modern Site Builds</h3>
-                            <p>Fast, content-driven websites designed to support launches, service sales, and future system integrations.</p>
-                            <div class="project-links">
-                                <a href="work.html">See Projects</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding section-surface">
-                <div class="container split-section">
-                    <div class="split-copy">
-                        <span class="eyebrow">About Parker Tech Lab</span>
-                        <h2>A boutique studio blending modern design, frontend craft, and systems thinking.</h2>
-                        <p>Parker Tech Lab helps businesses move from outdated or fragmented digital experiences into clear, credible, growth-oriented websites.</p>
-                        <p>The work is grounded in thoughtful design decisions, responsive builds, and practical technology that supports the next phase of your business.</p>
-                        <a href="about.html" class="btn btn-secondary">Learn More</a>
-                    </div>
-                    <div class="card stack-card">
-                        <div class="stack-row">
-                            <strong>Core Focus</strong>
-                            <span>Design clarity</span>
-                        </div>
-                        <div class="stack-row">
-                            <strong>Build Style</strong>
-                            <span>Responsive, polished, scalable</span>
-                        </div>
-                        <div class="stack-row">
-                            <strong>Tech Lens</strong>
-                            <span>Automation and AI-ready systems</span>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="cta-banner">
-                        <div>
-                            <span class="eyebrow">Start Your Next Project</span>
-                            <h2>Need a site that looks stronger, works harder, and scales with your business?</h2>
-                        </div>
-                        <a href="contact.html" class="btn btn-primary">Start a Project</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container footer-grid">
-                <div>
-                    <a href="index.html" class="footer-logo">Parker Tech Lab</a>
-                    <p class="footer-tagline">Modern Web Design • Automation • AI Systems</p>
-                </div>
-                <nav class="footer-nav" aria-label="Footer">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="work.html">Work</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <div class="footer-socials" aria-label="Social links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">GitHub</a>
                 </div>
             </div>
-            <div class="container footer-bottom">
-                <p>© 2026 Parker Tech Lab. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
+        </section>
 
-    <script src="js/script.js"></script>
+        <section class="mx-auto max-w-container-max px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="mb-stack-lg flex flex-col gap-stack-lg">
+                <span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Expertise</span>
+                <h2 class="font-display-md text-display-md">Next-Gen Capabilities</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-gutter md:grid-cols-3">
+                <div class="glass-card flex flex-col gap-stack-md rounded-xl p-8 transition-all hover:border-primary/50">
+                    <span class="material-symbols-outlined text-4xl text-primary">web</span>
+                    <h3 class="font-headline-lg text-headline-lg">Web Design</h3>
+                    <p class="text-on-surface-variant">Bespoke, high-conversion marketing sites and complex web applications built with modern frameworks.</p>
+                </div>
+                <div class="glass-card flex flex-col gap-stack-md rounded-xl p-8 transition-all hover:border-primary/50">
+                    <span class="material-symbols-outlined text-4xl text-primary">memory</span>
+                    <h3 class="font-headline-lg text-headline-lg">AI Systems</h3>
+                    <p class="text-on-surface-variant">Custom LLM integrations and automated workflows designed to scale enterprise intelligence.</p>
+                </div>
+                <div class="glass-card flex flex-col gap-stack-md rounded-xl p-8 transition-all hover:border-primary/50">
+                    <span class="material-symbols-outlined text-4xl text-primary">videogame_asset</span>
+                    <h3 class="font-headline-lg text-headline-lg">Interactive</h3>
+                    <p class="text-on-surface-variant">Immersive 3D environments, gamified experiences, and creative coding for brand engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface-container-low py-section-gap">
+            <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
+                <div class="mb-16 flex flex-col gap-stack-lg">
+                    <span class="font-label-md text-label-md uppercase tracking-widest text-primary">Portfolio</span>
+                    <h2 class="font-display-md text-display-md">Case Studies</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-stack-lg md:grid-cols-2">
+                    <a class="group flex cursor-pointer flex-col gap-stack-md" href="work.html">
+                        <div class="glass-card relative aspect-[16/9] overflow-hidden rounded-xl">
+                            <img class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC47rUGSzmCZoShUxbHcFA-2tUI3omClcl8NltlD9py37kS6cuIaHiknTTTDWZCU1n1f4hmmeNSl4d5PgGYia7CQZijcbvXJLteAdBSCReT8tCUlxK3cgWhk47UFuxMeniElXCs40LfO1sR9NliWfal3Iadwhx-ruyhOJjCY3L7aIr1kChNLrYGJJ7SnroEwGyIehkvrNVcJ8JaJAkAhfGi0pmi9NV4kDNzYVmn99F4bGHUrv8T9URIok5LGvILTWIwL3RjbbCb0Qw" alt="A sophisticated digital dashboard interface for a high-end financial tool.">
+                            <div class="absolute inset-0 bg-surface/20 transition-all group-hover:bg-transparent"></div>
+                        </div>
+                        <div class="flex items-start justify-between pt-4">
+                            <div>
+                                <h4 class="font-headline-lg text-headline-lg">Smart Financial Tool</h4>
+                                <p class="text-on-surface-variant">Next-gen asset management interface</p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
+                        </div>
+                    </a>
+                    <a class="group flex cursor-pointer flex-col gap-stack-md" href="work.html">
+                        <div class="glass-card relative aspect-[16/9] overflow-hidden rounded-xl">
+                            <img class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ToijxXmXHyw10tavoolGjN_evXW4LjV-i0fi8FsnsW8vtE23hPUwmRoIT8-8aHnEDIn7s3ptfAVt8FhR9xf3Zx3lg3RukI5gtYrqVxqKuDyFlzT6rg5NZISguGgjc3Vi3sU7IPUMcV_qAzNh52fgCIqv0YIZMmS8zclh7tN2vQF9K9iWZcGUlwORRFCxMPT_6PgwHazQk-7fnLqeuhyQgILU_ovuxtIJdwegSzxFo0_CnI2gLqfYR8i42lBFYqi_U3LULLQSn2I" alt="A futuristic artificial intelligence command center visualization.">
+                            <div class="absolute inset-0 bg-surface/20 transition-all group-hover:bg-transparent"></div>
+                        </div>
+                        <div class="flex items-start justify-between pt-4">
+                            <div>
+                                <h4 class="font-headline-lg text-headline-lg">AutoNateAI</h4>
+                                <p class="text-on-surface-variant">Automated logistics neural network</p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary transition-transform group-hover:translate-x-2">arrow_forward</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-container-max px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="relative flex min-h-[500px] items-center overflow-hidden rounded-3xl border border-white/10 p-8 shadow-2xl md:p-12">
+                <div class="absolute inset-0 -z-10">
+                    <img class="h-full w-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3HAlbeYuKMEJ18d9ak_XIobIepO3K-hOjpw8NBITwIOVaPAWT-BXVePomAiP5ciUYeuup9Sd02G_W6HUZiuvx3JqlpQ1ZXcOmpE47AAWgDhRfb98_NJLAyXkULpMmoSbePBcrOOHYZzrbJ-WvqN7_HMV6BFdyN1DSGBHalu4qDyAGQpsiuZCuF4KQjcyLbwTrUOKAutcaLV_Tk0AAL0-jWevL-VfEIbab522xX2EAefj_QEZh5o3TbcmdWMMHVcV12nZJvSgJ5mQ" alt="A vast cinematic virtual landscape from the Codeverse interactive world.">
+                    <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+                </div>
+                <div class="flex flex-col gap-stack-lg md:w-1/2">
+                    <div class="flex items-center gap-2">
+                        <span class="h-[1px] w-8 bg-tertiary"></span>
+                        <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-tertiary">Featured Experience</span>
+                    </div>
+                    <h2 class="font-display-md text-display-md text-on-surface">Codeverse: Interactive Learning World</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Step into a cinematic, game-inspired educational odyssey. Codeverse bridges the gap between entertainment and high-performance technical mastery.
+                    </p>
+                    <a class="flex w-fit items-center gap-2 rounded-xl bg-tertiary px-8 py-4 font-label-md text-label-md text-on-tertiary transition-transform hover:scale-105" href="interactive.html">
+                        Launch Experience
+                        <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-container-max border-t border-white/5 px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="grid grid-cols-1 items-center gap-stack-lg md:grid-cols-2">
+                <div class="relative">
+                    <div class="glass-card aspect-[4/5] overflow-hidden rounded-2xl">
+                        <img class="h-full w-full object-cover mix-blend-luminosity transition-all duration-500 hover:mix-blend-normal" src="assets/images/brittany-parker.png" alt="Brittany Parker, founder of Parker Tech Lab.">
+                    </div>
+                    <div class="glass-card absolute -bottom-6 -right-6 rounded-xl border-primary/30 p-6 shadow-2xl">
+                        <div class="font-display-md text-display-md leading-none text-primary">BP</div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-stack-md px-4">
+                    <span class="font-label-md text-label-md uppercase text-primary">The Visionary</span>
+                    <h2 class="font-display-md text-display-md">Brittany Parker</h2>
+                    <p class="font-body-lg text-body-lg italic text-on-surface-variant">
+                        "Technology should feel like magic, but perform like clockwork. At Parker Tech Lab, we don't just build websites; we construct digital legacies."
+                    </p>
+                    <p class="leading-relaxed text-on-surface-variant">
+                        With over a decade of experience in creative engineering and strategic design, Brittany leads the studio with a focus on pushing the boundaries of what's possible on the open web.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <a class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-all hover:bg-surface-variant" href="about.html" aria-label="About Brittany Parker">
+                            <span class="material-symbols-outlined text-sm">link</span>
+                        </a>
+                        <a class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-all hover:bg-surface-variant" href="contact.html" aria-label="Contact Parker Tech Lab">
+                            <span class="material-symbols-outlined text-sm">hub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface-container-lowest px-margin-mobile py-section-gap md:px-margin-desktop">
+            <div class="glass-card relative mx-auto flex max-w-container-max flex-col items-center gap-stack-lg overflow-hidden rounded-[2rem] p-stack-lg text-center md:p-24">
+                <div class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[100px]"></div>
+                <h2 class="relative z-10 font-display-md text-5xl md:text-7xl">Ready to build the future?</h2>
+                <p class="relative z-10 max-w-xl font-body-lg text-body-lg text-on-surface-variant">
+                    We are currently accepting new projects. Let's discuss how we can elevate your digital presence.
+                </p>
+                <div class="relative z-10 flex gap-stack-md">
+                    <a class="rounded-full bg-primary px-10 py-5 font-label-md text-label-md text-on-primary transition-all hover:scale-95" href="contact.html">Book a Discovery Call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full border-t border-white/5 bg-surface-container-lowest py-stack-lg">
+        <div class="mx-auto flex max-w-container-max flex-col items-start justify-between gap-stack-lg px-margin-mobile md:flex-row md:px-margin-desktop">
+            <div class="flex flex-col gap-stack-sm">
+                <div class="font-display-md text-headline-lg font-bold text-on-surface">Parker Tech Lab</div>
+                <p class="max-w-xs font-body-md text-body-md text-on-surface-variant">© 2026 Parker Tech Lab. Creative Excellence in Tech.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-gutter md:grid-cols-4">
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md font-semibold text-on-surface">Studio</span>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="about.html">About</a>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="work.html">Work</a>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="services.html">Services</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md font-semibold text-on-surface">Legal</span>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Privacy Policy</a>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Terms of Service</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md font-semibold text-on-surface">Social</span>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="https://x.com" target="_blank" rel="noreferrer">Twitter/X</a>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="mb-2 font-label-md text-label-md font-semibold text-on-surface">Resources</span>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="interactive.html">Interactive</a>
+                    <a class="text-on-surface-variant transition-colors duration-200 hover:text-secondary" href="contact.html">Press Kit</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
